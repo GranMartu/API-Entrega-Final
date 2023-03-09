@@ -1,6 +1,4 @@
 const { check, validationResult } = require("express-validator");
-// [A-Z][a-z]{0,20}
-
 const register = [
 
 
@@ -40,7 +38,6 @@ const passwordRecover = [
         };
     }),
     (req, res, next) => {
-        const token = req.params.token
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json(errors)

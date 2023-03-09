@@ -1,13 +1,6 @@
-const bcrypt = require("../utils/handlePassword")
 const Member = require("../members/membersMd")
 
-
-
 const getAllMembers = (req, res, next) => {
-
-
-
-
 
     Member.find().then((data) => {
 

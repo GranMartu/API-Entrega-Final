@@ -1,21 +1,6 @@
 const Member = require("../membersMd");
 const jwt = require("../../utils/jwt");
 
-
-const configurationForm = async (req, res, next) => {
-    const { token } = req.params;
-    const parsedToken = jwt.parseJwt(token);
-    // const tokenData = jwt.parseJwt(req.headers.authorization.split(" ").pop());
-    const currentMember = (await Member.find({ email: parsedToken.email }))[0];
-
-
-    res.redirect(`http://127.0.0.1:5173/${token}`);
-
-};
-
-
-
-
 const updateMembership = async (req, res, next) => {
 
     try {

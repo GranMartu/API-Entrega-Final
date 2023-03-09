@@ -1,4 +1,3 @@
-const bcrypt = require("./handlePassword");
 const Member = require("../members/membersMd");
 const jwt = require("./jwt");
 const transporter = require("./mailer");

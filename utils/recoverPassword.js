@@ -1,8 +1,4 @@
-const bcrypt = require("./handlePassword");
-const Member = require("../members/membersMd");
 const jwt = require("./jwt");
-
-
 const passwordRecover = async (req, res, next) => {
     const { token } = req.params;
     const parsedToken = jwt.parseJwt(token);
